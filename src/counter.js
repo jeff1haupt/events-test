@@ -12,6 +12,9 @@ function Counter(props) {
 
 export default Counter
 
+// Events 1 Video
+// import React from 'react';
+
 // export default class Counter extends React.Component {
 //     constructor(props) {
 //         super(props);
@@ -32,6 +35,29 @@ export default Counter
 //                 className="btn btn-primary mx-2"
 //                 onClick={this.handleClick}>
 //                 {this.state.name} {this.state.count}
+//             </button>
+//         );
+//     }
+// }
+
+// Events 2 video
+
+// export default class Counter extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.handleClick = this.handleClick.bind(this);
+//     }
+
+//     handleClick() {
+//         this.props.onClick(this.props.name);
+//     }
+
+//     render() {
+//         return (
+//             <button
+//                 className="btn btn-primary mx-2"
+//                 onClick={this.handleClick}>
+//                 {this.props.name} {this.props.count}
 //             </button>
 //         );
 //     }

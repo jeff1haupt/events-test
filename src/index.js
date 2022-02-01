@@ -5,10 +5,14 @@ import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import Container from './container';
 import reportWebVitals from './reportWebVitals';
 
+// You can also use React.Fragments instead of StrictMode to fix the double firing
+// React Fragments allows you to not have to wrap unnecessary divs around your elements
+// https://reactjs.org/docs/fragments.html <-- check out the docs for this
+
 ReactDOM.render(
-  <React.StrictMode>
+  <React.Fragment> 
     <Container />
-  </React.StrictMode>,
+  </React.Fragment>,
   document.getElementById('root')
 );
 
