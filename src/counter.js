@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 
-function Counter(props) {
-    const [count, setCount] = useState(0);
+// function Counter(props) {
+//     const [count, setCount] = useState(0);
 
-    return (
-        <button className="btn btn-primary mx-2" onClick={() => setCount(count + 1)}>
-            {props.name} {count}
-        </button>
-    )
-}
+//     return (
+//         <button className="btn btn-primary mx-2" onClick={() => setCount(count + 1)}>
+//             {props.name} {count}
+//         </button>
+//     )
+// }
 
-export default Counter
+// export default Counter
 
 // Events 1 Video
-// import React from 'react';
+import React from 'react';
 
 // export default class Counter extends React.Component {
 //     constructor(props) {
@@ -42,23 +42,23 @@ export default Counter
 
 // Events 2 video
 
-// export default class Counter extends React.Component {
-//     constructor(props) {
-//         super(props);
-//         this.handleClick = this.handleClick.bind(this);
-//     }
+export default class Counter extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+    }
 
-//     handleClick() {
-//         this.props.onClick(this.props.name);
-//     }
+    handleClick() {
+        this.props.onClick(this.props.name);
+    }
 
-//     render() {
-//         return (
-//             <button
-//                 className="btn btn-primary mx-2"
-//                 onClick={this.handleClick}>
-//                 {this.props.name} {this.props.count}
-//             </button>
-//         );
-//     }
-// }
+    render() {
+        return (
+            <button
+                className="btn btn-primary mx-2"
+                onClick={this.handleClick}>
+                {this.props.name} {this.props.count}
+            </button>
+        );
+    }
+}
