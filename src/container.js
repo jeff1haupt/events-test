@@ -25,6 +25,8 @@ import Counter from './counter';
 //                 <Counter name="One" />
 //                 <Counter name="Two" />
 //                 <Counter name="Three" />
+//                 <Counter name="Four" />
+//                 <Counter name="Joe" />
 //             </React.Fragment>
 //         );
 //     }
@@ -40,27 +42,39 @@ import Counter from './counter';
 
 //             }
 //         }
-//         this.countClicks = this.countClicks.bind(this);
+//         this.countClicks = this.countClicks.bind(this); // needed for React classes
 //     }
 
 //     countClicks(name) {
 //         this.setState(state => {
-//             state.counts[name]
-//                 ? state.counts[name] += 1
-//                 : state.counts[name] = 1;
+//             state.counts[name] // if statement
+//                 ? state.counts[name] += 1 // what happens if true
+//                 : state.counts[name] = 1; // what happens if false
 //             return state;
 //         })
 //     }
+
+//     // state: {
+//     //     counts: {
+//     //         one: 4,
+//     //         two: 3, 
+//     //         three: 5
+//     //     }
+//     // }
 //     render() {
 //         return (
 //             <React.Fragment>
 //                 <Counter 
 //                     name="one" 
-//                     count={this.state.counts.one}
+//                     count={this.state.counts.one} // = 4
 //                     onClick={this.countClicks}/>
 //                 <Counter 
 //                     name="one" 
-//                     count={this.state.counts.one}
+//                     count={this.state.counts.one} // = 4 
+//                     onClick={this.countClicks}/>
+//                 <Counter 
+//                     name="two" 
+//                     count={this.state.counts.two}
 //                     onClick={this.countClicks}/>
 //                 <Counter 
 //                     name="two" 
@@ -109,10 +123,6 @@ export default class Container extends React.Component {
             <React.Fragment>
                 <div>
                 <h2>{this.state.highestCountName}</h2>
-                <Counter 
-                    name="one" 
-                    count={this.state.counts.one}
-                    onClick={this.countClicks}/>
                 <Counter 
                     name="one" 
                     count={this.state.counts.one}
